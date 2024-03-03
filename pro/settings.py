@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user',
     'app',
+    'book',
+    'audio',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -162,7 +165,7 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',  # ローテーション機能付き
             'filename': os.path.join(LOGGING_DIR, 'logging_app.log'),  # ログファイル名
-            'maxBytes': 1024 * 1024 * 5,  # 5 MB
+            'maxBytes': 1024 * 1024 * 100,  # 5 MB
             'backupCount': 5,  # 古いログファイルは5個まで保持
             'formatter': 'verbose',
             'encoding': 'utf-8',  # UTF-8エンコーディングを使用
