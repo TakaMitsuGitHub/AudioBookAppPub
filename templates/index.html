@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 class="hello_world">Hello World!</h1>
+<form action="#">
+  {% csrf_token %}
+  <button id="button" class="button">button</button>
+</form>
+{% endblock main %}
